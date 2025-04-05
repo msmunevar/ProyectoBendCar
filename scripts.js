@@ -1,18 +1,18 @@
 const swiper = new Swiper('.swiper', {
-  loop: true,
-  autoplay: {
-    delay: 3000, // Cambia de imagen cada 3 segundos
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
 
 // Lógica del botón
 // Mostrar/Ocultar iframe
