@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carrusel con Swiper.js Mejorado</title>
 
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles.css" />
+
 </head>
+
 <body>
 
-  <!-- Contenedor para el botón -->
-  <div class="button-container">
+  <div class="container">
     <button id="toggleView">Ver en 3D</button>
-  </div>
 
-  <!-- Contenedor separado para el iframe -->
-  <div class="iframe-wrapper">
-    <iframe id="viewer-3d" class="hidden" src="https://360.3dmodels.org/view/227467/" frameborder="0"></iframe>
-  </div>
+    <!-- Iframe separado -->
+    <div class="iframe-wrapper">
+      <iframe id="viewer-3d" class="hidden" src="https://360.3dmodels.org/view/227467/" frameborder="0"></iframe>
+    </div>
 
-  <!-- Contenedor separado para el carrusel -->
-  <div class="carousel-container">
+    <!-- Carrusel separado -->
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -41,10 +41,13 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
+
   </div>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="scripts.js"></script>
+
 </body>
+
 </html>
