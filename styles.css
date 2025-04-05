@@ -1,4 +1,4 @@
-/* Estilo general del body */
+/* Estilo general del body */ 
 body {
   display: flex;
   justify-content: center;
@@ -6,7 +6,7 @@ body {
   flex-direction: column;  /* Alinea el contenido en columna */
   min-height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
+  background-color: transparent;  /* Fondo transparente */
 }
 
 /* Estilo para el contenedor principal */
