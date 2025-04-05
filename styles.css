@@ -26,6 +26,18 @@ body {
   display: none;
 }
 
+#viewer-3d,
+.swiper {
+  transition: opacity 0.5s ease;
+}
+
+#viewer-3d.hidden,
+.swiper.hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
 .swiper {
   width: 80%;
   aspect-ratio: 9 / 14;
