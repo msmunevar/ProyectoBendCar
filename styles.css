@@ -8,6 +8,25 @@ body {
   background-color: transparent;
 }
 
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#toggleView.animate {
+  animation: desplazamiento 0.5s ease;
+}
+
 #toggleView {
   margin-bottom: 20px;
   padding: 10px 20px;
@@ -26,11 +45,11 @@ body {
 }
 
 #toggleView.active {
-  background-color: #28a745; /* Color para "Ver Fotos" */
+  background-color: #28a745; /* Color cuando está activo (Ver Fotos) */
 }
 
 #toggleView.active:hover {
-  background-color: #1e7e34;
+  background-color: #218838;
 }
 
 #viewer-3d {
