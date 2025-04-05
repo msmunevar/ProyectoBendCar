@@ -45,7 +45,8 @@ body {
 }
 
 #toggleView.active {
-  background-color: #28a745; /* Color cuando está activo (Ver Fotos) */
+  background-color: #555555; /* Gris corporativo */
+  color: white;
 }
 
 #toggleView.active:hover {
