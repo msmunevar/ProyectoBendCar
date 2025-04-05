@@ -17,13 +17,15 @@ const iframe = document.getElementById('viewer-3d');
 const swiperContainer = document.querySelector('.swiper');
 
 toggleButton.addEventListener('click', () => {
-  if (iframe.style.display === 'none' || iframe.style.display === '') {
-    iframe.style.display = 'block';
-    swiperContainer.style.display = 'none';
-    toggleButton.textContent = 'Ver Fotos';
-  } else {
-    iframe.style.display = 'none';
-    swiperContainer.style.display = 'block';
+  const isIframeVisible = !iframe.classList.contains('hidden');
+
+  if (isIframeVisible) {
+    iframe.classList.add('hidden');
+    swiperContainer.classList.remove('hidden');
     toggleButton.textContent = 'Ver en 3D';
+  } else {
+    iframe.classList.remove('hidden');
+    swiperContainer.classList.add('hidden');
+    toggleButton.textContent = 'Ver Fotos';
   }
 });
