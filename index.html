@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carrusel con Swiper.js Mejorado</title>
+  <title>Visor Fotos y 3D</title>
 
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -13,8 +13,8 @@
   <!-- Botón Visor Fotos -->
   <button id="visorButton" class="visor-button">Visor Fotos</button>
 
-  <!-- Swiper -->
-  <div class="swiper">
+  <!-- Swiper (Carrusel) -->
+  <div class="swiper" id="swiperContainer">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="images/rolex_submariner.png" alt="Imagen 1">
@@ -29,6 +29,11 @@
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Iframe (Visor 3D) - Inicialmente oculto -->
+  <div id="iframeContainer" style="display: none;">
+    <iframe width="745" height="480" src="https://360.3dmodels.org/view/227467/" frameborder="0"></iframe>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
