@@ -9,7 +9,7 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
   autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
+    delay: 3000, // 3 segundos de retardo entre cada cambio de imagen
+    disableOnInteraction: false, // Esto permite que el autoplay siga funcionando aunque el usuario interactúe
   },
 });
