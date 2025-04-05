@@ -8,19 +8,22 @@ body {
   background-color: transparent;
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iframe-wrapper {
+  margin-top: 20px; /* separación del botón */
+}
+
 @keyframes desplazamiento {
-  0% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(10px);
-  }
-  60% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(0); }
+  30% { transform: translateX(10px); }
+  60% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
 }
 
 #toggleView.animate {
@@ -28,6 +31,7 @@ body {
 }
 
 #toggleView {
+  margin-bottom: 0;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -54,49 +58,18 @@ body {
   background-color: #218838;
 }
 
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.viewer-wrapper {
-  position: relative;
-  width: 400px;
-  height: 480px;
-}
-
 #viewer-3d {
   width: 400px;
   height: 480px;
   border: none;
   display: block;
   border-radius: 15px;
-  position: absolute;
-  top: 40px; /* 👈 Aquí separamos del botón */
-  left: 0;
-}
-
-#viewer-3d,
-.swiper {
-  transition: opacity 0.5s ease;
-}
-
-#viewer-3d.hidden,
-.swiper.hidden {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
 }
 
 .swiper {
-  width: 400px;
-  height: 480px;
+  width: 80%;
+  margin-top: 20px;
   background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .swiper-slide {
