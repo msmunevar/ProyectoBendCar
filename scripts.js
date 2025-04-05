@@ -1,3 +1,4 @@
+// Inicialización del Swiper
 const swiper = new Swiper('.swiper', {
   loop: true,
   pagination: {
@@ -14,23 +15,28 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-const visorButton = document.getElementById("visorButton");
-const swiperContainer = document.getElementById("swiperContainer");
-const iframeContainer = document.getElementById("iframeContainer");
+// Obtener el botón y el iframe
+const toggleButton = document.getElementById('toggleView');
+const iframe = document.getElementById('viewer-3d');
 
-visorButton.addEventListener("click", () => {
-  // Cambia el texto y aplica un efecto de transición al hacer clic
-  if (visorButton.textContent === "Visor Fotos") {
-    // Ocultar el carrusel y mostrar el iframe
-    swiperContainer.style.display = "none";
-    iframeContainer.style.display = "block";
-    visorButton.textContent = "Visor 3D";
-    visorButton.style.backgroundColor = "#28a745"; // Cambiar color
+// Función para alternar la visibilidad del visor 3D y manejar el autoplay
+toggleButton.addEventListener('click', function() {
+  // Alternar la visibilidad del visor 3D
+  iframe.classList.toggle('hidden');
+
+  // Alternar la clase "active" para cambiar el estilo del botón
+  this.classList.toggle('active');
+  
+  // Si el visor 3D está visible, detener el autoplay
+  if (!iframe.classList.contains('hidden')) {
+    swiper.autoplay.stop();  // Detener la reproducción automática
   } else {
-    // Mostrar el carrusel y ocultar el iframe
-    swiperContainer.style.display = "block";
-    iframeContainer.style.display = "none";
-    visorButton.textContent = "Visor Fotos";
-    visorButton.style.backgroundColor = "#007bff"; // Volver al color original
+    swiper.autoplay.start(); // Reanudar la reproducción automática
   }
+  
+  // Añadir animación al botón
+  this.classList.add('animate');  
+  
+  // Opcional: Eliminar la animación después de que haya terminado
+  setTimeout(() => this.classList.remove('animate'), 500);
 });
