@@ -5,39 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Carrusel con Swiper.js Mejorado</title>
 
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <div class="main-container">
-    <button id="toggleView">Ver en 3D</button>
-
-    <iframe id="viewer-3d" class="hidden" src="https://360.3dmodels.org/view/227467/" frameborder="0"></iframe>
-
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="images/rolex_submariner.png" alt="Imagen Rolex">
-        </div>
-        <div class="swiper-slide">
-          <img src="https://via.placeholder.com/800x400?text=Imagen+2" alt="Imagen 2">
-        </div>
-        <div class="swiper-slide">
-          <img src="https://via.placeholder.com/800x400?text=Imagen+3" alt="Imagen 3">
-        </div>
+  <!-- Swiper -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/800x400?text=Imagen+1" alt="Imagen 1">
       </div>
-
-      <!-- Flechas de navegación -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/800x400?text=Imagen+2" alt="Imagen 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/800x400?text=Imagen+3" alt="Imagen 3">
+      </div>
     </div>
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+    <!-- Flechas -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
+
+  <!-- Enlace al archivo JS -->
+  <script src="scripts.js"></script>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="scripts.js"></script>
+
 </body>
 </html>
