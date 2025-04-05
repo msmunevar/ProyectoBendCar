@@ -1,65 +1,64 @@
-<style>
-  /* Estilo general */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    background-color: #f8f8f8;
-  }
+/* Estilo general del body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  /* Alinea el contenido en columna */
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
 
-  .main-container {
-    width: 80%;
-    text-align: center;
-  }
+/* Estilo para el contenedor principal */
+.main-container {
+  width: 80%;
+  text-align: center;
+}
 
-  /* Estilo del botón */
-  #toggleView {
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+/* Estilo del botón */
+#toggleView {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  /* Estilo del iframe */
-  iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-    margin-top: 20px;
-  }
+/* Estilo para el carrusel con relación de aspecto 9:12 */
+.swiper {
+  width: 80%;
+  height: 0;
+  padding-top: 66.67%;  /* Relación de aspecto 9:12 */
+  position: relative;
+  margin: 0 auto;
+}
 
-  /* Estilo del carrusel */
-  .swiper {
-    width: 80%;
-    height: 0;
-    padding-top: 66.67%; /* Relación de aspecto 9:12 (9 / 12 = 0.75, entonces 100% * 0.75 = 75%) */
-    position: relative;
-    margin: 0 auto;
-  }
+/* Estilo de las imágenes dentro del carrusel */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
 
-  /* Estilo de las imágenes dentro del carrusel */
-  .swiper-slide img {
-    width: 100%;
-    height: auto;
-  }
+/* Estilo de las flechas de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
 
-  /* Estilo de las flechas de navegación */
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #fff;
-  }
+/* Estilo de la paginación */
+.swiper-pagination-bullet {
+  background-color: #fff;
+}
 
-  /* Estilo de la paginación */
-  .swiper-pagination-bullet {
-    background-color: #fff;
-  }
+/* Estilo del iframe */
+iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  margin-top: 20px;
+}
 
-  .hidden {
-    display: none;
-  }
-</style>
+.hidden {
+  display: none;
+}
