@@ -56,9 +56,8 @@ body {
 }
 
 #viewer-3d {
-  width: 80%;
-  height: auto;
-  aspect-ratio: 9 / 14;
+  width: 745px;
+  height: 480px;
   border: none;
   display: block;
   margin: 20px auto;
