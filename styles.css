@@ -1,11 +1,18 @@
 body {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Asegura que el contenido esté al principio */
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
-  background-color: transparent;
+  background-color: #f0f0f0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes desplazamiento {
@@ -28,7 +35,7 @@ body {
 }
 
 #toggleView {
-  margin-top: 20px; /* Asegura que el botón esté al principio */
+  margin-bottom: 20px; /* Separar el botón del carrusel */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -55,54 +62,12 @@ body {
   background-color: #218838;
 }
 
-.container {
+.swiper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.viewer-wrapper {
-  position: relative;
-  width: 400px;
-  height: 480px;
-}
-
-#viewer-3d {
-  width: 400px;
-  height: 480px;
-  border: none;
-  display: block;
-  border-radius: 15px;
-  position: absolute;
-  top: 0;
-  top: 40px; /* Separación del botón */
-  left: 0;
-}
-
-#viewer-3d,
-.swiper {
-  transition: opacity 0.5s ease;
-}
-
-#viewer-3d.hidden,
-.swiper.hidden {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-}
-
-.swiper {
-  width: 400px;
+  max-width: 800px;
   height: 480px;
   background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.swiper-slide {
-  background-color: transparent;
+  margin-top: 20px; /* Separar el carrusel del botón */
 }
 
 .swiper-slide img {
@@ -110,6 +75,21 @@ body {
   height: 100%;
   object-fit: contain;
   border-radius: 15px;
+}
+
+#viewer-3d {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+  border-radius: 15px;
+  position: relative;
+  margin-top: 20px; /* Separar el iframe del botón */
+}
+
+#viewer-3d.hidden,
+.swiper.hidden {
+  display: none;
 }
 
 .hidden {
