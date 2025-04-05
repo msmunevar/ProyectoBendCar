@@ -87,3 +87,6 @@ body {
   object-fit: contain;
   border-radius: 15px;
 }
+.hidden {
+  display: none;
+}
