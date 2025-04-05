@@ -1,5 +1,9 @@
 const swiper = new Swiper('.swiper', {
   loop: true,
+  autoplay: {
+    delay: 3000, // Cambia de imagen cada 3 segundos
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -11,6 +15,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Lógica del botón
+// Mostrar/Ocultar iframe
 const toggleButton = document.getElementById('toggleView');
 const iframe = document.getElementById('viewer-3d');
 const swiperContainer = document.querySelector('.swiper');
