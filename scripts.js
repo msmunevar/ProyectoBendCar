@@ -31,8 +31,11 @@ toggleButton.addEventListener('click', () => {
     toggleButton.classList.add('active');
   }
 
-  // Reiniciar animación
+  // Reiniciar animación correctamente
   toggleButton.classList.remove('animate');
-  void toggleButton.offsetWidth; // Forzar reflow para reiniciar animación
-  toggleButton.classList.add('animate');
+
+  // Espera al siguiente frame para volver a agregar la clase
+  requestAnimationFrame(() => {
+    toggleButton.classList.add('animate');
+  });
 });
