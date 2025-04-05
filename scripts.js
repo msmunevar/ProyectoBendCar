@@ -23,11 +23,16 @@ toggleButton.addEventListener('click', () => {
     iframe.classList.add('hidden');
     swiperContainer.classList.remove('hidden');
     toggleButton.textContent = 'Ver en 3D';
-    toggleButton.classList.remove('active'); // Quitar clase activa
+    toggleButton.classList.remove('active');
   } else {
     iframe.classList.remove('hidden');
     swiperContainer.classList.add('hidden');
     toggleButton.textContent = 'Ver Fotos';
-    toggleButton.classList.add('active'); // Agregar clase activa
+    toggleButton.classList.add('active');
   }
+
+  // Reiniciar animación
+  toggleButton.classList.remove('animate');
+  void toggleButton.offsetWidth; // Forzar reflow para reiniciar animación
+  toggleButton.classList.add('animate');
 });
