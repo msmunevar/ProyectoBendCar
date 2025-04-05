@@ -23,9 +23,11 @@ toggleButton.addEventListener('click', () => {
     iframe.classList.add('hidden');
     swiperContainer.classList.remove('hidden');
     toggleButton.textContent = 'Ver en 3D';
+    toggleButton.classList.remove('active'); // Quitar clase activa
   } else {
     iframe.classList.remove('hidden');
     swiperContainer.classList.add('hidden');
     toggleButton.textContent = 'Ver Fotos';
+    toggleButton.classList.add('active'); // Agregar clase activa
   }
 });
