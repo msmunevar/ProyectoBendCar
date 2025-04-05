@@ -9,7 +9,19 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
   autoplay: {
-    delay: 3000, // 3 segundos de retardo entre cada cambio de imagen
-    disableOnInteraction: false, // Esto permite que el autoplay siga funcionando aunque el usuario interactúe
+    delay: 3000,
+    disableOnInteraction: false,
   },
+});
+
+const visorButton = document.getElementById("visorButton");
+visorButton.addEventListener("click", () => {
+  // Cambia el texto y aplica un efecto de transición al hacer clic
+  if (visorButton.textContent === "Visor Fotos") {
+    visorButton.textContent = "Visor 3D";
+    visorButton.style.backgroundColor = "#28a745"; // Cambia el color al presionar
+  } else {
+    visorButton.textContent = "Visor Fotos";
+    visorButton.style.backgroundColor = "#007bff"; // Vuelve al color original
+  }
 });
