@@ -36,19 +36,26 @@ document.addEventListener('DOMContentLoaded', function () {
   const visorURL = visor3DPorModelo[modelo] || visor3DPorModelo['submariner'];
   visor3d.src = visorURL;
 
+  const whatsappNumber = '521234567890'; // <--- CAMBIA este número por tu número de WhatsApp
+
   imagenes.forEach(({ src, precio, color }) => {
+    const mensaje = `Quiero el reloj ${modelo} de color ${color} que cuesta ${precio}`;
+    const urlWhatsApp = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
+
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
-      slide.innerHTML = `
-    <div class="watch-card">
-      <img src="${src}" alt="Imagen ${modelo}">
-      <div class="watch-info">
-        <p class="watch-price">${precio}</p>
-        <p class="watch-color">${color}</p>
-        <button class="buy-button">🛒 Comprar ahora</button>
+    slide.innerHTML = `
+      <div class="watch-card">
+        <img src="${src}" alt="Imagen ${modelo}">
+        <div class="watch-info">
+          <p class="watch-price">${precio}</p>
+          <p class="watch-color">${color}</p>
+          <a href="${urlWhatsApp}" target="_blank">
+            <button class="buy-button">🛒 Comprar ahora</button>
+          </a>
+        </div>
       </div>
-    </div>
-  `;
+    `;
 
     swiperWrapper.appendChild(slide);
   });
@@ -89,4 +96,3 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => this.classList.remove('animate'), 500);
   });
 });
-
