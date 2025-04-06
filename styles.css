@@ -26,8 +26,9 @@ body {
 }
 
 .visor-button:hover {
-  background-color: #0056b3;
-  transform: translateX(-50%) scale(1.1);
+  background-color: #aaa; /* gris claro */
+  color: white;
+  transform: translateX(-50%) scale(1.05);
 }
 
 .visor-button.active {
