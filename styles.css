@@ -62,7 +62,8 @@ body {
 #iframeContainer {
   display: none;
   text-align: center;
-  margin-top: 80px;
+  padding-top: 80px; /* 👈 Añadido */
+  margin-top: 20px;  
 }
 
 /* Añadir animación en el botón */
