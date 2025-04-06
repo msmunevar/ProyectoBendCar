@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Diccionario de imágenes por modelo
   const imagenesPorModelo = {
     submariner: [
-      'images/submariner/imagen1.jpg',
-      'images/submariner/imagen2.jpg',
+      'images/submariner/roles_sumbariner.png',
+      'images/submariner/submariner_azul.png',
       'https://via.placeholder.com/800x400?text=Submariner+3'
     ],
     daytona: [
