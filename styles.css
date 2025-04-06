@@ -4,7 +4,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #f8f9fa;
+  background-color: transparent;
   flex-direction: column;
   font-family: Arial, sans-serif;
 }
@@ -74,14 +74,16 @@ body {
   padding: 10px;
 }
 
+/* Este bloque es el que conserva el fondo blanco */
 .watch-info {
   margin-top: 10px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.95); /* Blanco casi sólido */
   padding: 12px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra suave */
   width: 90%;
   max-width: 300px;
+  backdrop-filter: blur(4px); /* efecto cristalino opcional */
 }
 
 .watch-price {
