@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <p class="watch-price">${precio}</p>
           <p class="watch-color">${color}</p>
           <a href="${urlWhatsApp}">
-            <button class="buy-button">🛒 Comprar ahora</button>
+            <button class="buy-button" target="_blank">🛒 Comprar ahora</button>
           </a>
         </div>
       </div>
