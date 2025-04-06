@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const visorURL = visor3DPorModelo[modelo] || visor3DPorModelo['submariner'];
   visor3d.src = visorURL;
 
-  const whatsappNumber = '521234567890'; // <--- CAMBIA este número por tu número de WhatsApp
+  const whatsappNumber = '573102050193'; // <--- CAMBIA este número por tu número de WhatsApp
 
   imagenes.forEach(({ src, precio, color }) => {
     const mensaje = `Quiero el reloj ${modelo} de color ${color} que cuesta ${precio}`;
