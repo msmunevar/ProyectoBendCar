@@ -39,15 +39,17 @@ document.addEventListener('DOMContentLoaded', function () {
   imagenes.forEach(({ src, precio, color }) => {
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
-    slide.innerHTML = `
-      <div class="watch-card">
-        <img src="${src}" alt="Imagen ${modelo}">
-        <div class="watch-info">
-          <p class="watch-price">${precio}</p>
-          <p class="watch-color">${color}</p>
-        </div>
+      slide.innerHTML = `
+    <div class="watch-card">
+      <img src="${src}" alt="Imagen ${modelo}">
+      <div class="watch-info">
+        <p class="watch-price">${precio}</p>
+        <p class="watch-color">${color}</p>
+        <button class="buy-button">🛒 Comprar ahora</button>
       </div>
-    `;
+    </div>
+  `;
+
     swiperWrapper.appendChild(slide);
   });
 
