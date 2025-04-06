@@ -55,6 +55,12 @@ body {
   border-radius: 15px;
 }
 
+.swiper-pagination {
+  position: relative;
+  z-index: 1; /* Menor que watch-info (z-index: 2) */
+  margin-top: 20px; /* Separación opcional */
+}
+
 #iframeContainer {
   display: none;
   text-align: center;
@@ -77,6 +83,7 @@ body {
 /* Este bloque es el que conserva el fondo blanco */
 .watch-info {
   margin-top: 10px;
+  z-index: 2; /* más alto que la paginación */
   background-color: rgba(255, 255, 255, 0.95); /* Blanco casi sólido */
   padding: 12px;
   border-radius: 12px;
