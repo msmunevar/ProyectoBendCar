@@ -33,7 +33,7 @@ body {
 /* Cuando el botón tiene la clase active */
 .visor-button.active {
   background-color: #d3d3d3; /* Color gris cuando está activo */
-  color: #333;
+  color: white;
 }
 
 /* Swiper y sus elementos */
