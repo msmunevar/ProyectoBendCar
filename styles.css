@@ -32,7 +32,7 @@ body {
 
 /* Cuando el botón tiene la clase active */
 .visor-button.active {
-  background-color: #d3d3d3; /* Color gris cuando está activo */
+  background-color: #333; /* Color gris cuando está activo */
   color: white;
 }
 
