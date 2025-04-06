@@ -63,6 +63,21 @@ body {
   margin-top: 20px; /* Separación opcional */
 }
 
+.swiper-pagination-bullet {
+  background: #999;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #333; /* Consistente */
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333; /* Mismo tono que el botón */
+}
+
 #iframeContainer {
   display: none;
   text-align: center;
