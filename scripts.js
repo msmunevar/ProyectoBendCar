@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     daytona: [
       { src: 'images/daytona/imagen1.jpg', precio: '$18.000', color: 'Blanco' },
       { src: 'images/daytona/imagen2.jpg', precio: '$19.000', color: 'Negro' },
-      { src: 'https://via.placeholder.com/800x400?text=Daytona+3', precio: '$19,500', color: 'Oro' }
+      { src: 'https://via.placeholder.com/800x400?text=Daytona+3', precio: '$19.500', color: 'Oro' }
     ],
     explorer: [
       { src: 'images/explorer/imagen1.jpg', precio: '$10.000', color: 'Negro' },
