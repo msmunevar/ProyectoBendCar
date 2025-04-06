@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!isIframeVisible) {
       iframeContainer.style.display = 'block';  // Mostrar visor 3D
       swiperContainer.style.display = 'none';   // Ocultar el carrusel
-      toggleButton.textContent = 'Ver Fotos';   // Cambiar texto del botón
+      toggleButton.textContent = 'Visor Fotos';   // Cambiar texto del botón
       swiper.autoplay.stop();  // Detener la reproducción automática del carrusel
     } else {
       iframeContainer.style.display = 'none';   // Ocultar visor 3D
       swiperContainer.style.display = 'block';  // Mostrar carrusel
-      toggleButton.textContent = 'Ver 3D';      // Cambiar texto del botón
+      toggleButton.textContent = 'Visor 3D';      // Cambiar texto del botón
       swiper.autoplay.start();  // Reanudar la reproducción automática del carrusel
     }
 
