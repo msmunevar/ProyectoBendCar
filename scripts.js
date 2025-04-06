@@ -8,26 +8,24 @@ document.addEventListener('DOMContentLoaded', function () {
   const urlParams = new URLSearchParams(window.location.search);
   const modelo = urlParams.get('modelo') || 'submariner';
 
-  // Diccionario de imágenes por modelo
   const imagenesPorModelo = {
     submariner: [
-      'images/submariner/rolex_submariner.png',
-      'images/submariner/submariner_azul.png',
-      'https://via.placeholder.com/800x400?text=Submariner+3'
+      { src: 'images/submariner/rolex_submariner.png', precio: '$12,000', color: 'Negro' },
+      { src: 'images/submariner/submariner_azul.png', precio: '$12,500', color: 'Azul' },
+      { src: 'https://via.placeholder.com/800x400?text=Submariner+3', precio: '$13,000', color: 'Verde' }
     ],
     daytona: [
-      'images/daytona/imagen1.jpg',
-      'images/daytona/imagen2.jpg',
-      'https://via.placeholder.com/800x400?text=Daytona+3'
+      { src: 'images/daytona/imagen1.jpg', precio: '$18,000', color: 'Blanco' },
+      { src: 'images/daytona/imagen2.jpg', precio: '$19,000', color: 'Negro' },
+      { src: 'https://via.placeholder.com/800x400?text=Daytona+3', precio: '$19,500', color: 'Oro' }
     ],
     explorer: [
-      'images/explorer/imagen1.jpg',
-      'images/explorer/imagen2.jpg',
-      'https://via.placeholder.com/800x400?text=Explorer+3'
+      { src: 'images/explorer/imagen1.jpg', precio: '$10,000', color: 'Negro' },
+      { src: 'images/explorer/imagen2.jpg', precio: '$10,200', color: 'Plateado' },
+      { src: 'https://via.placeholder.com/800x400?text=Explorer+3', precio: '$10,500', color: 'Gris' }
     ]
   };
 
-  // Diccionario de iframes 3D por modelo
   const visor3DPorModelo = {
     submariner: 'https://360.3dmodels.org/view/227467/',
     daytona: 'https://360.3dmodels.org/view/221234/',
@@ -38,15 +36,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const visorURL = visor3DPorModelo[modelo] || visor3DPorModelo['submariner'];
   visor3d.src = visorURL;
 
-  // Insertar imágenes en el carrusel
-  imagenes.forEach(src => {
+  imagenes.forEach(({ src, precio, color }) => {
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
-    slide.innerHTML = `<img src="${src}" alt="Imagen ${modelo}">`;
+    slide.innerHTML = `
+      <div class="watch-card">
+        <img src="${src}" alt="Imagen ${modelo}">
+        <div class="watch-info">
+          <p class="watch-price">${precio}</p>
+          <p class="watch-color">${color}</p>
+        </div>
+      </div>
+    `;
     swiperWrapper.appendChild(slide);
   });
 
-  // Inicializar Swiper
   const swiper = new Swiper('.swiper', {
     loop: true,
     pagination: {
@@ -63,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  // Alternar visor 3D <-> fotos
   toggleButton.addEventListener('click', function () {
     const isIframeVisible = iframeContainer.style.display === 'block';
 
