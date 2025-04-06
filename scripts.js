@@ -16,30 +16,37 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  // Obtener el botón y el iframe
+  // Obtener los elementos del DOM
   const toggleButton = document.getElementById('toggleView');
   const iframeContainer = document.getElementById('iframeContainer');
+  const swiperContainer = document.getElementById('swiperContainer');
 
-  // Asegúrate de que el botón y el iframe existan en el DOM
-  if (!toggleButton || !iframeContainer) {
-    console.error('El botón o el iframe no se encuentran en el DOM');
+  // Asegúrate de que el botón y los contenedores existan en el DOM
+  if (!toggleButton || !iframeContainer || !swiperContainer) {
+    console.error('El botón o los contenedores no se encuentran en el DOM');
     return;
   }
 
-  // Función para alternar la visibilidad del visor 3D y manejar el autoplay
+  // Función para alternar la visibilidad entre el carrusel y el visor 3D
   toggleButton.addEventListener('click', function() {
-    // Alternar la visibilidad del visor 3D
-    iframeContainer.style.display = iframeContainer.style.display === 'none' ? 'block' : 'none';
+    // Alternar la visibilidad del carrusel y el visor 3D
+    const isIframeVisible = iframeContainer.style.display === 'block';
+    
+    // Si el visor 3D no está visible, mostrarlo y ocultar el carrusel
+    if (!isIframeVisible) {
+      iframeContainer.style.display = 'block';  // Mostrar visor 3D
+      swiperContainer.style.display = 'none';   // Ocultar el carrusel
+      toggleButton.textContent = 'Ver Fotos';   // Cambiar texto del botón
+      swiper.autoplay.stop();  // Detener la reproducción automática del carrusel
+    } else {
+      iframeContainer.style.display = 'none';   // Ocultar visor 3D
+      swiperContainer.style.display = 'block';  // Mostrar carrusel
+      toggleButton.textContent = 'Ver 3D';      // Cambiar texto del botón
+      swiper.autoplay.start();  // Reanudar la reproducción automática del carrusel
+    }
 
     // Alternar la clase "active" para cambiar el estilo del botón
     this.classList.toggle('active');
-    
-    // Si el visor 3D está visible, detener el autoplay
-    if (iframeContainer.style.display === 'block') {
-      swiper.autoplay.stop();  // Detener la reproducción automática
-    } else {
-      swiper.autoplay.start(); // Reanudar la reproducción automática
-    }
     
     // Añadir animación al botón
     this.classList.add('animate');  
