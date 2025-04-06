@@ -75,8 +75,10 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #333; /* Mismo tono que el botón */
+  color: #333 !important;
+  font-weight: bold;
 }
+
 
 #iframeContainer {
   display: none;
