@@ -18,18 +18,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Obtener el botón y el iframe
   const toggleButton = document.getElementById('toggleView');
-  const iframe = document.getElementById('viewer-3d');
+  const iframeContainer = document.getElementById('iframeContainer');
+
+  // Asegúrate de que el botón y el iframe existan en el DOM
+  if (!toggleButton || !iframeContainer) {
+    console.error('El botón o el iframe no se encuentran en el DOM');
+    return;
+  }
 
   // Función para alternar la visibilidad del visor 3D y manejar el autoplay
   toggleButton.addEventListener('click', function() {
     // Alternar la visibilidad del visor 3D
-    iframe.classList.toggle('hidden');
+    iframeContainer.style.display = iframeContainer.style.display === 'none' ? 'block' : 'none';
 
     // Alternar la clase "active" para cambiar el estilo del botón
     this.classList.toggle('active');
     
     // Si el visor 3D está visible, detener el autoplay
-    if (!iframe.classList.contains('hidden')) {
+    if (iframeContainer.style.display === 'block') {
       swiper.autoplay.stop();  // Detener la reproducción automática
     } else {
       swiper.autoplay.start(); // Reanudar la reproducción automática
