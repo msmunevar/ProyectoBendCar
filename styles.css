@@ -128,8 +128,8 @@ body {
 }
 
 .buy-button {
-  margin-top: 0; /* Ajustado para pegarlo más */
-  background-color: #333; /* Elegante y neutro */
+  margin-top: 0px;
+  background-color: #28a745;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -138,9 +138,6 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 
 .buy-button:hover {
