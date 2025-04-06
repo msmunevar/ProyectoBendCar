@@ -4,9 +4,9 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: transparent;
+  background-color: #f8f9fa;
   flex-direction: column;
-  font-family: Arial, sans-serif; /* Mejora la tipografía general */
+  font-family: Arial, sans-serif;
 }
 
 .visor-button {
@@ -25,47 +25,73 @@ body {
   z-index: 5;
 }
 
-/* Efecto hover sobre el botón */
 .visor-button:hover {
   background-color: #0056b3;
-  transform: translateX(-50%) scale(1.1); /* Mejora el efecto de escalado */
+  transform: translateX(-50%) scale(1.1);
 }
 
-/* Cuando el botón tiene la clase active */
 .visor-button.active {
-  background-color: #333; /* Color gris cuando está activo */
+  background-color: #333;
   color: white;
 }
 
-/* Swiper y sus elementos */
 .swiper {
   width: 80%;
   height: 80vh;
-  display: block; /* Asegura que ocupe el espacio requerido */
+  display: block;
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  flex-direction: column;
 }
 
 .swiper-slide img {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* Mantiene la relación de aspecto de las imágenes */
+  max-height: 400px;
+  object-fit: contain;
   border-radius: 15px;
 }
 
-/* Estilo para el iframe, inicialmente oculto */
 #iframeContainer {
   display: none;
   text-align: center;
-  margin-top: 20px;  
+  margin-top: 20px;
 }
 
-/* Añadir animación en el botón */
 .visor-button.animate {
-  transform: scale(1.1); /* Aumento al hacer clic */
+  transform: scale(1.1);
+}
+
+/* Estilo para la info debajo del reloj */
+.watch-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.watch-info {
+  margin-top: 10px;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 300px;
+}
+
+.watch-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 5px 0;
+}
+
+.watch-color {
+  font-size: 14px;
+  color: #555;
 }
