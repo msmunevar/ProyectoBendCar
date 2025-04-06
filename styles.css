@@ -32,7 +32,7 @@ body {
 }
 
 .visor-button.active {
-  background-color: #555;
+  background-color: #aaa;
   color: white;
 }
 
