@@ -83,6 +83,7 @@ body {
 
 /* Este bloque es el que conserva el fondo blanco */
 .watch-info {
+  position: relative;
   margin-top: 10px;
   z-index: 2; /* más alto que la paginación */
   background-color: rgba(255, 255, 255, 0.95); /* Blanco casi sólido */
