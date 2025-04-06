@@ -109,6 +109,7 @@ body {
   width: 90%;
   max-width: 300px;
   backdrop-filter: blur(4px); /* efecto cristalino opcional */
+  align-items: center;
 }
 
 .watch-price {
